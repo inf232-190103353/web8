@@ -13,9 +13,10 @@ class FileuploadController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        //
-    }
+        {
+            $posts = Fileupload::all();
+            return view('post.index')->with(['posts'=>$posts]);
+        }
 
     /**
      * Show the form for creating a new resource.

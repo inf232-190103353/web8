@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FileuploadController;
-
+use App\Http\Controllers\EmailController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,3 +18,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::resource('fileupload', FileuploadController::class);
+
+Route::get('form', [FileuploadController::class, 'index' ]);
+
+Route::get('/email', [EmailController::class, 'create' ]);
+Route::post('/email', [EmailController::class, 'sendEmail' ])->name('send.email');
