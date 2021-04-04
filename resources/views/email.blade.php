@@ -21,11 +21,7 @@
 		<div class="col-md-8 mx-auto">
 			<div class="contact-form">
 
-                @if(session()->has('message'))
-                    <div class="alert alert-success">
-                        {{ session()->get('message') }}
-                    </div>
-                @endif
+
                 <form action="{{ route('send.email') }}" method="post" class="form1">
                 @csrf
                             <div class="form-group">
@@ -64,6 +60,11 @@
 					<div class="text-center">
 						<button type="submit" class="btn btn-success">Send message</button>
 					</div>
+					@if(session()->has('message'))
+                                        <div class="alert">
+                                            {{ session()->get('message') }}
+                                        </div>
+                                    @endif
 				</form>
 			</div>
 		</div>
@@ -339,6 +340,11 @@
 }
 .bs-example {
     margin: 20px;
+}
+.alert{
+color:white;
+text-align:center;
+font-size:130%;
 }
 </style>
 </body>
