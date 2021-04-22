@@ -37,6 +37,11 @@ items from the system.
 
 ------------
 
+ ### The database has the following layout:
+ 
+ ![image](https://user-images.githubusercontent.com/78639472/115650981-1cbe2f00-a34c-11eb-96c4-5c66ba065d17.png)
+ 
+
  ### 👤 Default Account for testing
 	
 **Admin Default Account**
